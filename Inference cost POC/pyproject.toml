@@ -1,0 +1,53 @@
+[project]
+name = "reliability-tax"
+version = "0.1.0"
+description = "Measuring reliability-per-dollar for multi-turn tool-use LLM agents: reliability isn't free, it's paid in tokens and latency."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "David C" }]
+keywords = ["llm", "agents", "evaluation", "inference", "reliability", "tool-use"]
+
+# Core deps for the $0 mock pipeline (harness, strategies, metrics, plots).
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "matplotlib>=3.8",
+    "pydantic>=2.6",
+    "tenacity>=8.2",
+]
+
+[project.optional-dependencies]
+# Only needed once you talk to a real served model.
+serve = [
+    "openai>=1.30",
+    "modal>=0.64",
+]
+# vLLM is installed inside the Modal image, not locally. Listed for reference.
+gpu = [
+    "vllm>=0.6.0",
+]
+# tau-bench (Phase 3 headline) is not on PyPI — install from the pinned git commit.
+# `pip install -e '.[taubench]'`
+taubench = [
+    "tau-bench @ git+https://github.com/sierra-research/tau-bench@59a200c6d575d595120f1cb70fea53cef0632f6b",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

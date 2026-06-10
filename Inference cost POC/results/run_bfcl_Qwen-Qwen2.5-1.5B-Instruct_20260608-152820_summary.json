@@ -1,0 +1,252 @@
+[
+  {
+    "strategy": "baseline",
+    "n_tasks": 40,
+    "n_seeds": 3,
+    "success_rate": 0.825,
+    "success_ci": {
+      "point": 0.825,
+      "low": 0.7,
+      "high": 0.925,
+      "level": 0.95
+    },
+    "abstention_rate": 0.0,
+    "pass_at_1": 0.825,
+    "cost": {
+      "measured_gpu_usd": 0.04560364317924343,
+      "normalized_token_usd": 0.0054924,
+      "gpu_seconds": 205.42181612271816,
+      "prompt_tokens": 21954,
+      "completion_tokens": 1836,
+      "total_tokens": 23790,
+      "num_calls": 120,
+      "gpu": "L4",
+      "gpu_usd_per_sec": 0.000222,
+      "token_price_label": "ref(0.2/0.6 per Mtok)",
+      "measured_to_normalized_ratio": 8.303044785384063
+    },
+    "reliability_per_dollar_measured": {
+      "success_rate": 0.825,
+      "cost_usd": 0.04560364317924343,
+      "n_tasks": 120,
+      "cost_view": "measured_gpu",
+      "successes": 99.0,
+      "reliability_per_dollar": 2170.8791907454447
+    },
+    "reliability_per_dollar_normalized": {
+      "success_rate": 0.825,
+      "cost_usd": 0.0054924,
+      "n_tasks": 120,
+      "cost_view": "normalized_token",
+      "successes": 99.0,
+      "reliability_per_dollar": 18024.907144417743
+    },
+    "avg_calls_per_task": 1.0,
+    "avg_tokens_per_task": 198.25,
+    "pass_at_k_curve": {
+      "1": 0.825,
+      "2": 0.825,
+      "3": 0.825
+    }
+  },
+  {
+    "strategy": "self_consistency",
+    "n_tasks": 40,
+    "n_seeds": 3,
+    "success_rate": 0.8416666666666667,
+    "success_ci": {
+      "point": 0.8416666666666666,
+      "low": 0.725,
+      "high": 0.9416666666666667,
+      "level": 0.95
+    },
+    "abstention_rate": 0.0,
+    "pass_at_1": 0.8416666666666666,
+    "cost": {
+      "measured_gpu_usd": 0.08249460564076155,
+      "normalized_token_usd": 0.027466200000000003,
+      "gpu_seconds": 371.5973227061331,
+      "prompt_tokens": 109770,
+      "completion_tokens": 9187,
+      "total_tokens": 118957,
+      "num_calls": 600,
+      "gpu": "L4",
+      "gpu_usd_per_sec": 0.000222,
+      "token_price_label": "ref(0.2/0.6 per Mtok)",
+      "measured_to_normalized_ratio": 3.0034954103866403
+    },
+    "reliability_per_dollar_measured": {
+      "success_rate": 0.8416666666666667,
+      "cost_usd": 0.08249460564076155,
+      "n_tasks": 120,
+      "cost_view": "measured_gpu",
+      "successes": 101.0,
+      "reliability_per_dollar": 1224.3224780032733
+    },
+    "reliability_per_dollar_normalized": {
+      "success_rate": 0.8416666666666667,
+      "cost_usd": 0.027466200000000003,
+      "n_tasks": 120,
+      "cost_view": "normalized_token",
+      "successes": 101.0,
+      "reliability_per_dollar": 3677.24694351603
+    },
+    "avg_calls_per_task": 5.0,
+    "avg_tokens_per_task": 991.3083333333333,
+    "pass_at_k_curve": {
+      "1": 0.8416666666666666,
+      "2": 0.85,
+      "3": 0.85
+    }
+  },
+  {
+    "strategy": "self_correct",
+    "n_tasks": 40,
+    "n_seeds": 3,
+    "success_rate": 0.8166666666666667,
+    "success_ci": {
+      "point": 0.8166666666666667,
+      "low": 0.6916666666666667,
+      "high": 0.925,
+      "level": 0.95
+    },
+    "abstention_rate": 0.0,
+    "pass_at_1": 0.8166666666666667,
+    "cost": {
+      "measured_gpu_usd": 0.03023452559914207,
+      "normalized_token_usd": 0.0121452,
+      "gpu_seconds": 136.1915567528922,
+      "prompt_tokens": 52638,
+      "completion_tokens": 2696,
+      "total_tokens": 55334,
+      "num_calls": 245,
+      "gpu": "L4",
+      "gpu_usd_per_sec": 0.000222,
+      "token_price_label": "ref(0.2/0.6 per Mtok)",
+      "measured_to_normalized_ratio": 2.4894217961945517
+    },
+    "reliability_per_dollar_measured": {
+      "success_rate": 0.8166666666666667,
+      "cost_usd": 0.03023452559914207,
+      "n_tasks": 120,
+      "cost_view": "measured_gpu",
+      "successes": 98.0,
+      "reliability_per_dollar": 3241.3275240138323
+    },
+    "reliability_per_dollar_normalized": {
+      "success_rate": 0.8166666666666667,
+      "cost_usd": 0.0121452,
+      "n_tasks": 120,
+      "cost_view": "normalized_token",
+      "successes": 98.0,
+      "reliability_per_dollar": 8069.031386885354
+    },
+    "avg_calls_per_task": 2.0416666666666665,
+    "avg_tokens_per_task": 461.1166666666667,
+    "pass_at_k_curve": {
+      "1": 0.8166666666666667,
+      "2": 0.825,
+      "3": 0.825
+    }
+  },
+  {
+    "strategy": "abstain",
+    "n_tasks": 40,
+    "n_seeds": 3,
+    "success_rate": 0.825,
+    "success_ci": {
+      "point": 0.825,
+      "low": 0.7,
+      "high": 0.925,
+      "level": 0.95
+    },
+    "abstention_rate": 0.0,
+    "pass_at_1": 0.825,
+    "cost": {
+      "measured_gpu_usd": 0.016404559471797198,
+      "normalized_token_usd": 0.0054924,
+      "gpu_seconds": 73.89441203512251,
+      "prompt_tokens": 21954,
+      "completion_tokens": 1836,
+      "total_tokens": 23790,
+      "num_calls": 120,
+      "gpu": "L4",
+      "gpu_usd_per_sec": 0.000222,
+      "token_price_label": "ref(0.2/0.6 per Mtok)",
+      "measured_to_normalized_ratio": 2.986774355800233
+    },
+    "reliability_per_dollar_measured": {
+      "success_rate": 0.825,
+      "cost_usd": 0.016404559471797198,
+      "n_tasks": 120,
+      "cost_view": "measured_gpu",
+      "successes": 99.0,
+      "reliability_per_dollar": 6034.907561535029
+    },
+    "reliability_per_dollar_normalized": {
+      "success_rate": 0.825,
+      "cost_usd": 0.0054924,
+      "n_tasks": 120,
+      "cost_view": "normalized_token",
+      "successes": 99.0,
+      "reliability_per_dollar": 18024.907144417743
+    },
+    "avg_calls_per_task": 1.0,
+    "avg_tokens_per_task": 198.25,
+    "pass_at_k_curve": {
+      "1": 0.825,
+      "2": 0.825,
+      "3": 0.825
+    }
+  },
+  {
+    "strategy": "verifier_rerank",
+    "n_tasks": 40,
+    "n_seeds": 3,
+    "success_rate": 0.8416666666666667,
+    "success_ci": {
+      "point": 0.8416666666666666,
+      "low": 0.725,
+      "high": 0.9416666666666667,
+      "level": 0.95
+    },
+    "abstention_rate": 0.0,
+    "pass_at_1": 0.8416666666666666,
+    "cost": {
+      "measured_gpu_usd": 0.13824836264355156,
+      "normalized_token_usd": 0.061497600000000006,
+      "gpu_seconds": 622.7403722682502,
+      "prompt_tokens": 252099,
+      "completion_tokens": 18463,
+      "total_tokens": 270562,
+      "num_calls": 1200,
+      "gpu": "L4",
+      "gpu_usd_per_sec": 0.000222,
+      "token_price_label": "ref(0.2/0.6 per Mtok)",
+      "measured_to_normalized_ratio": 2.248028583937447
+    },
+    "reliability_per_dollar_measured": {
+      "success_rate": 0.8416666666666667,
+      "cost_usd": 0.13824836264355156,
+      "n_tasks": 120,
+      "cost_view": "measured_gpu",
+      "successes": 101.0,
+      "reliability_per_dollar": 730.5692311192882
+    },
+    "reliability_per_dollar_normalized": {
+      "success_rate": 0.8416666666666667,
+      "cost_usd": 0.061497600000000006,
+      "n_tasks": 120,
+      "cost_view": "normalized_token",
+      "successes": 101.0,
+      "reliability_per_dollar": 1642.3405141013632
+    },
+    "avg_calls_per_task": 10.0,
+    "avg_tokens_per_task": 2254.6833333333334,
+    "pass_at_k_curve": {
+      "1": 0.8416666666666666,
+      "2": 0.85,
+      "3": 0.85
+    }
+  }
+]

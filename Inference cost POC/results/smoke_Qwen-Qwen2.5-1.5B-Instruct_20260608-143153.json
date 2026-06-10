@@ -1,0 +1,402 @@
+{
+  "config": {
+    "benchmark": "bfcl",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "strategies": [
+      "baseline",
+      "self_consistency"
+    ],
+    "seeds": [
+      0
+    ],
+    "n_tasks": 5,
+    "task_offset": 0,
+    "notes": "phase1-smoke"
+  },
+  "task_ids": [
+    "simple_python_0",
+    "simple_python_1",
+    "simple_python_2",
+    "simple_python_3",
+    "simple_python_4"
+  ],
+  "wall_clock_s": 7.301255290862173,
+  "results": [
+    {
+      "task_id": "simple_python_0",
+      "strategy": "baseline",
+      "seed": 0,
+      "success": true,
+      "abstained": false,
+      "final_answer": "calculate_triangle_area(base=10, height=5)",
+      "num_calls": 1,
+      "prompt_tokens": 150,
+      "completion_tokens": 13,
+      "total_tokens": 163,
+      "wall_clock_s": 0.6037762919440866,
+      "first_ttft_s": 0.3580049581360072,
+      "meta": {
+        "n_calls_planned": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "wall_clock_s": 0.6037762919440866,
+          "ttft_s": 0.3580049581360072,
+          "role": "answer",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_1",
+      "strategy": "baseline",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "math.factorial(5)",
+      "num_calls": 1,
+      "prompt_tokens": 123,
+      "completion_tokens": 7,
+      "total_tokens": 130,
+      "wall_clock_s": 0.31379245896823704,
+      "first_ttft_s": 0.23454391700215638,
+      "meta": {
+        "n_calls_planned": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 123,
+          "completion_tokens": 7,
+          "wall_clock_s": 0.31379245896823704,
+          "ttft_s": 0.23454391700215638,
+          "role": "answer",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_2",
+      "strategy": "baseline",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "math.hypot(4, 5)",
+      "num_calls": 1,
+      "prompt_tokens": 179,
+      "completion_tokens": 11,
+      "total_tokens": 190,
+      "wall_clock_s": 0.30108087486587465,
+      "first_ttft_s": 0.14109770907089114,
+      "meta": {
+        "n_calls_planned": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 179,
+          "completion_tokens": 11,
+          "wall_clock_s": 0.30108087486587465,
+          "ttft_s": 0.14109770907089114,
+          "role": "answer",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_3",
+      "strategy": "baseline",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "algebra.quadratic_roots(1, -3, 2)",
+      "num_calls": 1,
+      "prompt_tokens": 158,
+      "completion_tokens": 16,
+      "total_tokens": 174,
+      "wall_clock_s": 0.3602128750644624,
+      "first_ttft_s": 0.15684970817528665,
+      "meta": {
+        "n_calls_planned": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 158,
+          "completion_tokens": 16,
+          "wall_clock_s": 0.3602128750644624,
+          "ttft_s": 0.15684970817528665,
+          "role": "answer",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_4",
+      "strategy": "baseline",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "function_name(2, 6, 5)",
+      "num_calls": 1,
+      "prompt_tokens": 147,
+      "completion_tokens": 12,
+      "total_tokens": 159,
+      "wall_clock_s": 0.31799233285710216,
+      "first_ttft_s": 0.1642398340627551,
+      "meta": {
+        "n_calls_planned": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 147,
+          "completion_tokens": 12,
+          "wall_clock_s": 0.31799233285710216,
+          "ttft_s": 0.1642398340627551,
+          "role": "answer",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_0",
+      "strategy": "self_consistency",
+      "seed": 0,
+      "success": true,
+      "abstained": false,
+      "final_answer": "calculate_triangle_area(base=10, height=5)",
+      "num_calls": 3,
+      "prompt_tokens": 450,
+      "completion_tokens": 39,
+      "total_tokens": 489,
+      "wall_clock_s": 1.0362548339180648,
+      "first_ttft_s": 0.20838195807300508,
+      "meta": {
+        "n_samples": 3,
+        "winner_votes": 3,
+        "vote_distribution": {
+          "calculate_triangle_area(base=10,height=5)": 3
+        },
+        "unique_answers": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "wall_clock_s": 0.3747005839832127,
+          "ttft_s": 0.20838195807300508,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "wall_clock_s": 0.33751474996097386,
+          "ttft_s": 0.17482604109682143,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "wall_clock_s": 0.32403949997387826,
+          "ttft_s": 0.18309700000099838,
+          "role": "vote_sample",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_1",
+      "strategy": "self_consistency",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "math.factorial(5)",
+      "num_calls": 3,
+      "prompt_tokens": 369,
+      "completion_tokens": 21,
+      "total_tokens": 390,
+      "wall_clock_s": 0.9797367500141263,
+      "first_ttft_s": 0.2862603331450373,
+      "meta": {
+        "n_samples": 3,
+        "winner_votes": 3,
+        "vote_distribution": {
+          "factorial(5)": 3
+        },
+        "unique_answers": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 123,
+          "completion_tokens": 7,
+          "wall_clock_s": 0.3824151251465082,
+          "ttft_s": 0.2862603331450373,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 123,
+          "completion_tokens": 7,
+          "wall_clock_s": 0.28528308286331594,
+          "ttft_s": 0.20612787501886487,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 123,
+          "completion_tokens": 7,
+          "wall_clock_s": 0.31203854200430214,
+          "ttft_s": 0.23783458303660154,
+          "role": "vote_sample",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_2",
+      "strategy": "self_consistency",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "math.hypot(4, 5)",
+      "num_calls": 3,
+      "prompt_tokens": 537,
+      "completion_tokens": 33,
+      "total_tokens": 570,
+      "wall_clock_s": 0.9741729584056884,
+      "first_ttft_s": 0.16069633280858397,
+      "meta": {
+        "n_samples": 3,
+        "winner_votes": 3,
+        "vote_distribution": {
+          "hypot(4,5)": 3
+        },
+        "unique_answers": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 179,
+          "completion_tokens": 11,
+          "wall_clock_s": 0.2945582920219749,
+          "ttft_s": 0.16069633280858397,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 179,
+          "completion_tokens": 11,
+          "wall_clock_s": 0.36064154119230807,
+          "ttft_s": 0.22220870899036527,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 179,
+          "completion_tokens": 11,
+          "wall_clock_s": 0.3189731251914054,
+          "ttft_s": 0.1602385831065476,
+          "role": "vote_sample",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_3",
+      "strategy": "self_consistency",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "algebra.quadratic_roots(a=1, b=-3, c=2)",
+      "num_calls": 3,
+      "prompt_tokens": 474,
+      "completion_tokens": 54,
+      "total_tokens": 528,
+      "wall_clock_s": 1.2436982090584934,
+      "first_ttft_s": 0.15913729113526642,
+      "meta": {
+        "n_samples": 3,
+        "winner_votes": 2,
+        "vote_distribution": {
+          "quadratic_roots(a=1,b=-3,c=2)": 2,
+          "quadratic_roots(-3,1,2)": 1
+        },
+        "unique_answers": 2
+      },
+      "calls": [
+        {
+          "prompt_tokens": 158,
+          "completion_tokens": 19,
+          "wall_clock_s": 0.40134924999438226,
+          "ttft_s": 0.15913729113526642,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 158,
+          "completion_tokens": 16,
+          "wall_clock_s": 0.43008950003422797,
+          "ttft_s": 0.24171162489801645,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 158,
+          "completion_tokens": 19,
+          "wall_clock_s": 0.41225945902988315,
+          "ttft_s": 0.21727695898152888,
+          "role": "vote_sample",
+          "mean_logprob": null
+        }
+      ]
+    },
+    {
+      "task_id": "simple_python_4",
+      "strategy": "self_consistency",
+      "seed": 0,
+      "success": false,
+      "abstained": false,
+      "final_answer": "function_name(2, 6, 5)",
+      "num_calls": 3,
+      "prompt_tokens": 441,
+      "completion_tokens": 36,
+      "total_tokens": 477,
+      "wall_clock_s": 1.1687377898488194,
+      "first_ttft_s": 0.3316231658682227,
+      "meta": {
+        "n_samples": 3,
+        "winner_votes": 3,
+        "vote_distribution": {
+          "function_name(2,5,6)": 3
+        },
+        "unique_answers": 1
+      },
+      "calls": [
+        {
+          "prompt_tokens": 147,
+          "completion_tokens": 12,
+          "wall_clock_s": 0.47814966598525643,
+          "ttft_s": 0.3316231658682227,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 147,
+          "completion_tokens": 12,
+          "wall_clock_s": 0.37719654105603695,
+          "ttft_s": 0.17686004214920104,
+          "role": "vote_sample",
+          "mean_logprob": null
+        },
+        {
+          "prompt_tokens": 147,
+          "completion_tokens": 12,
+          "wall_clock_s": 0.313391582807526,
+          "ttft_s": 0.1649396251887083,
+          "role": "vote_sample",
+          "mean_logprob": null
+        }
+      ]
+    }
+  ]
+}
